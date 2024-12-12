@@ -8,6 +8,7 @@ TagManager:
   - Area2
   - Area3
   - Area4
+  - gema
   layers:
   - Default
   - TransparentFX

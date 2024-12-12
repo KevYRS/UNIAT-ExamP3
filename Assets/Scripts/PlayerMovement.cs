@@ -11,10 +11,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
 
+    private int Contador;
+
 
     void Start()
     {
-        
+        Contador = 0;
+
     }
 
     // Update is called once per frame
@@ -42,5 +45,19 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetFloat("moveX", moveDirection.x);
         anim.SetFloat("moveY", moveDirection.y);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("gema"))
+        {
+            //anillo.gameObject.SetActive(false);
+
+            Destroy(other.gameObject);
+            Contador += 1;
+            //sonidosJuego.PlayOneShot(moneda);
+        }
+        
     }
 }

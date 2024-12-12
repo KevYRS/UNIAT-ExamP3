@@ -45,5 +45,18 @@ public class PlayerChange : MonoBehaviour
 
         }
 
+
+        /*
+        if (collision.gameObject.tag == "Area2")
+        {
+            Vector3 camPosition = new Vector3(42.2f, 32.49f, -10);
+            cam.transform.position = camPosition;
+
+
+            Vector3 playerPosition = new Vector3(34.73f, 28.43f, 0);
+            player.transform.position = playerPosition;
+
+        }
+        */
     }
 }
