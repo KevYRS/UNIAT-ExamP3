@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator anim;
 
     private int Contador;
-
+    public TextMeshProUGUI txtContador;
 
     void Start()
     {
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        txtContador.text = "" + Contador; //score
         Movement();
         Animation();
     }
