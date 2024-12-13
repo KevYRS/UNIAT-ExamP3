@@ -12,11 +12,11 @@ public class PlayerChange : MonoBehaviour
     {
         if (collision.gameObject.tag == "Area3")
         {
-            Vector3 camPosition = new Vector3(24.5f, 2.2f, -10);
+            Vector3 camPosition = new Vector3(-11.5f, 12.93f, -10);
             cam.transform.position = camPosition;
 
 
-            Vector3 playerPosition = new Vector3(17.89f, 0.14f, 0);
+            Vector3 playerPosition = new Vector3(-15.12f, 8.64f, 0);
             player.transform.position = playerPosition;
 
         }
@@ -28,7 +28,7 @@ public class PlayerChange : MonoBehaviour
             cam.transform.position = camPosition;
 
 
-            Vector3 playerPosition = new Vector3(7.65f, -1.42f, 0);
+            Vector3 playerPosition = new Vector3(6.63f, -1.42f, 0);
             player.transform.position = playerPosition;
 
         }
@@ -46,17 +46,17 @@ public class PlayerChange : MonoBehaviour
         }
 
 
-        /*
+        
         if (collision.gameObject.tag == "Area2")
         {
-            Vector3 camPosition = new Vector3(42.2f, 32.49f, -10);
+            Vector3 camPosition = new Vector3(22.54f, 0f, -10);
             cam.transform.position = camPosition;
 
 
-            Vector3 playerPosition = new Vector3(34.73f, 28.43f, 0);
+            Vector3 playerPosition = new Vector3(16.58f, 0.35f, 0);
             player.transform.position = playerPosition;
 
         }
-        */
+        
     }
 }
