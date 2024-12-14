@@ -40,15 +40,11 @@ public class PlayerMovement : MonoBehaviour{
         Animation();
 
         if (playerHealth.HealthCount == 0){
-            WinLose.gameObject.SetActive(true);
-            Win.gameObject.SetActive(false);
-            Lose.gameObject.SetActive(true);
+            ActivateLoseScreen();
         }
 
         if (Contador == 2){
-            WinLose.gameObject.SetActive(true);
-            Lose.gameObject.SetActive(false);
-            Win.gameObject.SetActive(true);
+            ActivateWinScreen();
         }
     }
 
@@ -68,6 +64,29 @@ public class PlayerMovement : MonoBehaviour{
     private void Animation(){
         anim.SetFloat("moveX", moveDirection.x);
         anim.SetFloat("moveY", moveDirection.y);
+    }
+
+    private void ActivateLoseScreen(){
+        WinLose.gameObject.SetActive(true);
+        Win.gameObject.SetActive(false);
+        Lose.gameObject.SetActive(true);
+
+        StopAllSlimes();
+    }
+
+    private void ActivateWinScreen(){
+        WinLose.gameObject.SetActive(true);
+        Lose.gameObject.SetActive(false);
+        Win.gameObject.SetActive(true);
+
+        StopAllSlimes();
+    }
+
+    private void StopAllSlimes(){
+        SlimeBehavior[] slimes = FindObjectsOfType<SlimeBehavior>();
+        foreach (var slime in slimes){
+            slime.enabled = false; // Disable the SlimeBehavior script
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other){

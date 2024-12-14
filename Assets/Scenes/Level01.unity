@@ -10687,8 +10687,9 @@ MonoBehaviour:
   anim: {fileID: 1182166281}
   txtContador: {fileID: 2101221798}
   gema: {fileID: 8300000, guid: 87e7ea64d5206aa4dad96a381060cfba, type: 3}
-  Win: {fileID: 0}
-  Lose: {fileID: 0}
+  WinLose: {fileID: 1587364132}
+  Win: {fileID: 1718001545}
+  Lose: {fileID: 1983547860}
 --- !u!95 &1182166281
 Animator:
   serializedVersion: 5
