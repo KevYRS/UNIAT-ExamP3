@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] RawImage[] hearts;
-    private int healthCount = 3;
+    private int healthCount = 5;
     //public TextMeshProUGUI perdiste;
 
     void Start()
@@ -33,6 +33,14 @@ public class PlayerHealth : MonoBehaviour
 
             case 2:
                 hearts[2].GetComponent<RawImage>().enabled = false;
+                break;
+
+            case 3:
+                hearts[3].GetComponent<RawImage>().enabled = false;
+                break;
+
+            case 4:
+                hearts[4].GetComponent<RawImage>().enabled = false;
                 break;
 
         }
