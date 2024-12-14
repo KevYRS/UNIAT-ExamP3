@@ -16,10 +16,14 @@ public class PlayerMovement : MonoBehaviour
     private int Contador;
     public TextMeshProUGUI txtContador;
 
+
+    AudioSource sonidosJuego;
+    public AudioClip gema;
+
     void Start()
     {
         Contador = 0;
-
+        sonidosJuego = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -60,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
             Destroy(other.gameObject);
             Contador += 1;
-            //sonidosJuego.PlayOneShot(moneda);
+             sonidosJuego.PlayOneShot(gema);
         }
         
     }
