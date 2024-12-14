@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour{
     public GameObject WinLose;
     public GameObject Win;
     public GameObject Lose;
+    private PlayerHealth playerHealth;
 
     void Start(){
         Contador = 0;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour{
         Win.gameObject.SetActive(false);
         Lose.gameObject.SetActive(false);
         WinLose.gameObject.SetActive(false);
+        playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,12 @@ public class PlayerMovement : MonoBehaviour{
         txtContador.text = "" + Contador; //score
         Movement();
         Animation();
+
+        if (playerHealth.HealthCount == 0){
+            WinLose.gameObject.SetActive(true);
+            Win.gameObject.SetActive(false);
+            Lose.gameObject.SetActive(true);
+        }
 
         if (Contador == 2){
             WinLose.gameObject.SetActive(true);
@@ -45,6 +53,12 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     private void Movement(){
+
+        if (WinLose.activeSelf){
+            rb.velocity = Vector2.zero;
+            return;
+        }
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;

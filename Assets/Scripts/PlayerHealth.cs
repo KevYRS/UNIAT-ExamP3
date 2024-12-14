@@ -9,13 +9,15 @@ public class PlayerHealth : MonoBehaviour{
 
     [SerializeField] RawImage[] hearts;
     private int healthCount = 5;
-    //public TextMeshProUGUI perdiste;
 
     AudioSource sonidosJuego;
     public AudioClip hit;
 
+    public int HealthCount{
+        get { return healthCount; }
+    }
+
     void Start(){
-        // perdiste.gameObject.SetActive(false);
         sonidosJuego = GetComponent<AudioSource>();
     }
     // Update is called once per frame
@@ -42,9 +44,6 @@ public class PlayerHealth : MonoBehaviour{
                 hearts[4].GetComponent<RawImage>().enabled = false;
                 break;
 
-        }
-        if (healthCount == 0){
-           // perdiste.gameObject.SetActive(true);
         }
     }
 
