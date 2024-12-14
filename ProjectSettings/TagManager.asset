@@ -15,6 +15,7 @@ TagManager:
   - Area1.2
   - Area4.1
   - Area6
+  - Enemy
   layers:
   - Default
   - TransparentFX
