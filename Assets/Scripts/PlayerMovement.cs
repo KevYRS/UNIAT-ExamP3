@@ -19,12 +19,16 @@ public class PlayerMovement : MonoBehaviour{
     AudioSource sonidosJuego;
     public AudioClip gema;
 
+    public GameObject WinLose;
     public GameObject Win;
     public GameObject Lose;
 
     void Start(){
         Contador = 0;
         sonidosJuego = GetComponent<AudioSource>();
+        Win.gameObject.SetActive(false);
+        Lose.gameObject.SetActive(false);
+        WinLose.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +36,12 @@ public class PlayerMovement : MonoBehaviour{
         txtContador.text = "" + Contador; //score
         Movement();
         Animation();
+
+        if (Contador == 2){
+            WinLose.gameObject.SetActive(true);
+            Lose.gameObject.SetActive(false);
+            Win.gameObject.SetActive(true);
+        }
     }
 
     private void Movement(){
