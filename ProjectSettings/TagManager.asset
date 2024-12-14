@@ -11,6 +11,10 @@ TagManager:
   - gema
   - Area1.1
   - Area2.2
+  - Area5
+  - Area1.2
+  - Area4.1
+  - Area6
   layers:
   - Default
   - TransparentFX
