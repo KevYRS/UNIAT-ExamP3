@@ -10856,6 +10856,7 @@ MonoBehaviour:
   - {fileID: 1207034878}
   - {fileID: 1217799736}
   - {fileID: 81918239}
+  hit: {fileID: 8300000, guid: 80827853e6beae545ab2030da4fc4bd6, type: 3}
 --- !u!82 &1182166288
 AudioSource:
   m_ObjectHideFlags: 0
