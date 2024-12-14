@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour{
             ActivateLoseScreen();
         }
 
-        if (Contador == 2){
+        if (Contador == 4){
             ActivateWinScreen();
         }
     }

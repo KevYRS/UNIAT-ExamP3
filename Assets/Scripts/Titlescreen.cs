@@ -9,5 +9,6 @@ public class Titlescreen : MonoBehaviour{
     }
     public void QuitGame(){
         Application.Quit();
+        Debug.Log("salio del juego");
     }
 }
