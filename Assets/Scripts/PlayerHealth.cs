@@ -12,9 +12,15 @@ public class PlayerHealth : MonoBehaviour
     private int healthCount = 5;
     //public TextMeshProUGUI perdiste;
 
+
+    AudioSource sonidosJuego;
+    public AudioClip hit;
+    
+
     void Start()
     {
-       // perdiste.gameObject.SetActive(false);
+        // perdiste.gameObject.SetActive(false);
+        sonidosJuego = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -57,6 +63,7 @@ public class PlayerHealth : MonoBehaviour
 
         {
             healthCount--;
+            sonidosJuego.PlayOneShot(hit);
         }
     }
 }
